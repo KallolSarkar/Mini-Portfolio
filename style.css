@@ -1,0 +1,178 @@
+:root {
+    --Primary-green-color: #02aab0;
+
+    --Black-color: Black;
+    --light-Black: rgb(0, 0, 0, 0.7);
+    --darkgrey-color: rgba(223, 223, 223, .9);
+    --grey-color: rgb(255, 255, 255);
+    --white-color: white;
+
+    --ff-Primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --ff-Secondary: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-weight: 200;
+    font-family: var(--ff-Secondary);
+}
+
+.btn1 {
+    color: var(--Primary-green-color);
+    padding: 5px 15px;
+    display: inline-block;
+    border: 2px solid var(--Primary-green-color);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0px;
+    /* Animation */
+    background: linear-gradient(to left, var(--grey-color) 50%, var(--Primary-green-color) 50%) right;
+    background-size: 200%;
+    transition: .2s ease-out;
+}
+
+.btn1:hover {
+    background-position: left;
+    color: var(--white-color);
+}
+
+.btn2 {
+    color: white;
+    padding: 5px 15px;
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0px;
+    /* Animation */
+    background: linear-gradient(to left, var(--Primary-green-color) 50%, var(--grey-color) 50%) right;
+    background-size: 200%;
+    transition: .2s ease-out;
+}
+.btn2:hover {
+    background-position: left;
+    color: var(--Primary-green-color);
+}
+.btn3 {
+    color: var(--Primary-green-color);
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* home-page Section Start-- */
+.home-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--grey-color);
+}
+
+.home-page h1 {
+    /* text-align: center; */
+    color: var(--light-Black);
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: var(--ff-Primary);
+    margin-bottom: 20px;
+}
+
+.home-page .dev-name {
+    color: var(--Primary-green-color);
+}
+
+/* About Me sectiom start  */
+.about-me {
+    background-color: var(--Primary-green-color);
+    height: 90vh;
+    padding-top: 1rem;
+}
+
+.about-me h1 {
+    color: var(--grey-color);
+    text-transform: uppercase;
+    padding: 20px 0px;
+    margin: 1.6rem 0rem;
+
+}
+
+.about-me p {
+    color: var(--grey-color);
+}
+
+.about-me .my-details {
+    display: flex;
+    align-items: center;
+}
+
+.about-me img {
+    width: 300px;
+}
+
+/* Project sectiom start  */
+.project {
+    background-color: var(--grey-color);
+}
+
+/* .project .row {
+    display: flex;
+    align-items: center;
+} */
+.project h1 {
+    color: var(--light-Black);
+    font-weight: 600;
+    font-size: 3rem;
+    font-family: var(--ff-Primary);
+}
+
+.project h2 {
+    color: var(--light-Black);
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: var(--ff-Primary);
+}
+
+.project p {
+    color: var(--light-Black);
+    font-family: var(--ff-Secondary);
+}
+
+/* Contact section start here */
+.contact {
+    height: 50vh;
+    background-color: var(--Primary-green-color);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.contact h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--grey-color);
+    padding: 20px 0px;
+}
+
+.contact p {
+    color: var(--grey-color);
+}
+
+/* Footer section start here */
+.footer {
+    text-align: center;
+    background-color: var(--light-Black);
+    padding-bottom: .5rem;
+}
+
+.footer i {
+    color: var(--white-color);
+    font-size: 1.8rem;
+    padding: 2px 16px;
+
+}
+
+.footer .arrow-up {
+    padding-top: 3rem;
+}
+
+.footer-text {
+    color: var(--grey-color);
+}
