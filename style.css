@@ -16,6 +16,14 @@ p {
     font-family: var(--ff-Secondary);
 }
 
+a {
+    color: var(--light-Black);
+}
+
+.shadow2 {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px 2px;
+}
+
 .btn1 {
     color: var(--Primary-green-color);
     padding: 5px 15px;
@@ -24,6 +32,8 @@ p {
     font-size: 1rem;
     font-weight: 500;
     border-radius: 0px;
+    box-shadow: none;
+
     /* Animation */
     background: linear-gradient(to left, var(--grey-color) 50%, var(--Primary-green-color) 50%) right;
     background-size: 200%;
@@ -47,16 +57,31 @@ p {
     background-size: 200%;
     transition: .2s ease-out;
 }
+
 .btn2:hover {
     background-position: left;
     color: var(--Primary-green-color);
 }
+
 .btn3 {
     color: var(--Primary-green-color);
     padding: 5px 15px;
     font-size: 1rem;
     font-weight: 500;
+    /* animation-of-floating-left to Right */
+    transition: margin 0.2s ease-in-out;
 }
+
+.btn3:hover {
+    margin-left: 2px;
+    color: var(--Primary-green-color);
+
+}
+
+.btn3:focus {
+    box-shadow: none;
+}
+
 
 /* home-page Section Start-- */
 .home-page {
@@ -82,7 +107,7 @@ p {
 /* About Me sectiom start  */
 .about-me {
     background-color: var(--Primary-green-color);
-    height: 90vh;
+    /* height: 90vh; */
     padding-top: 1rem;
 }
 
@@ -99,8 +124,7 @@ p {
 }
 
 .about-me .my-details {
-    display: flex;
-    align-items: center;
+    padding-bottom: 10%;
 }
 
 .about-me img {
@@ -110,6 +134,7 @@ p {
 /* Project sectiom start  */
 .project {
     background-color: var(--grey-color);
+    padding-top: 20px;
 }
 
 /* .project .row {
@@ -121,6 +146,7 @@ p {
     font-weight: 600;
     font-size: 3rem;
     font-family: var(--ff-Primary);
+    text-transform: uppercase;
 }
 
 .project h2 {
@@ -137,7 +163,8 @@ p {
 
 /* Contact section start here */
 .contact {
-    height: 50vh;
+    /* height: 50vh; */
+    padding: 100px;
     background-color: var(--Primary-green-color);
     display: flex;
     align-items: center;
@@ -146,13 +173,20 @@ p {
 
 .contact h1 {
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
     color: var(--grey-color);
     padding: 20px 0px;
 }
 
 .contact p {
     color: var(--grey-color);
+    font-size: 1.5rem;
+
+}
+
+.contact .btn2 {
+    font-size: 1.6rem;
 }
 
 /* Footer section start here */
@@ -165,8 +199,8 @@ p {
 .footer i {
     color: var(--white-color);
     font-size: 1.8rem;
-    padding: 2px 16px;
-
+    padding: 12px 16px;
+    margin-bottom: 20px
 }
 
 .footer .arrow-up {
@@ -175,4 +209,37 @@ p {
 
 .footer-text {
     color: var(--grey-color);
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0);
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+
+.icons a {
+    transition: transform 0.5s;
+}
+
+.icons a:hover {
+    transform: translateY(-8px);
+}
+
+
+@media (min-width:1200px) {
+    .about-me {
+        clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+    }
+
+    .contact {
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+
+    }
+}
+
+@media (max-width:576px){
+    h1{
+        font-size: 2rem !important;
+    }
 }
